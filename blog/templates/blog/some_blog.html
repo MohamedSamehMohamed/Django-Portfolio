@@ -1,0 +1,13 @@
+{% extends 'myportfolio/base.html' %}
+{% block content %}
+
+<h2>{{ blog.writer }}</h2>
+
+<h2 class = "border-bottom">{{blog.date | date:'d m Y' }}</h2>
+<h2>{{ blog.title }}</h2>
+<div class = "border border-secondary">
+<h2>{{ blog.subject }}</h2>
+</div>
+
+<a href = "{% url 'blogs:all_blogs' %}" class = "btn btn-primary">Back To Blogs</a>
+{% endblock %}
